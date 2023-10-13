@@ -4,9 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsup src/index.ts --format ems,cjs --dts",
+    "dev": "tsup src/index.ts --format ems,cjs --dts --watch",
+    "lint": "eslint src/**/*.ts* --fix"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "tsup": "^7.2.0",
+    "typescript": "^5.2.2",
+    "@ignite-ui/ts-config": "*",
+    "@ignite-ui/eslint-config": "*"
+  }
 }
