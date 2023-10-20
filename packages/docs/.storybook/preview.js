@@ -4,6 +4,10 @@ import { themes } from "@storybook/theming";
 const preview = {
   parameters: {
     actions: { argTypesRegex: "^on[A-Z].*" },
+    viewport: {
+      viewports: newViewports, // newViewports would be an ViewportMap. (see below for examples)
+      defaultViewport: 'someDefault',
+    },
     controls: {
       matchers: {
         color: /(background|color)$/i,
